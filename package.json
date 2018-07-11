@@ -1,6 +1,6 @@
 {
   "name": "guld-random-cli",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Cryptographically secure random number generator using `/dev/urandom` with fallback to node's `crypto` and finally to `window.crypto || window.mscrypto`.",
   "bin": {
     "guld-random": "./cli.js"
@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.16.0",
-    "guld-random": "^0.3.4"
+    "guld-random": "^0.3.5"
   },
   "devDependencies": {
     "eslint": "^5.1.0",
