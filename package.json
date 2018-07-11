@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.16.0",
-    "guld-random": "^0.3.1"
+    "guld-random": "^0.3.2"
   },
   "devDependencies": {
     "eslint": "^5.1.0",
@@ -41,5 +41,8 @@
   "readme": "README.md",
   "engines": {
     "node": ">=7"
-  }
+  },
+  "homepage": "https://github.com/isysd/tech-js-node_modules-guld-random-cli#readme",
+  "preferGlobal": true,
+  "repository": "git@github.com:isysd/tech-js-node_modules-guld-random-cli.git"
 }
