@@ -42,7 +42,7 @@
   "engines": {
     "node": ">=7"
   },
-  "homepage": "https://github.com/isysd/tech-js-node_modules-guld-random-cli#readme",
+  "homepage": "https://bitbucket.org/isysd/tech-js-node_modules-guld-random-cli#readme",
   "preferGlobal": true,
-  "repository": "git@github.com:isysd/tech-js-node_modules-guld-random-cli.git"
+  "repository": "git@bitbucket.org:isysd/tech-js-node_modules-guld-random-cli.git"
 }

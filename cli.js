@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const program = require('commander')
 const { getRandStr, getRandInt } = require('guld-random')
-const VERSION = require('./package.json').version
 const { spawn } = require('child_process')
+const thispkg = require(`${__dirname}/package.json`)
+const runCLI = require('guld-cli-run')
 
 /* eslint-disable no-console */
 async function maybeRun (cmd, args = [], chance = 50) {
@@ -11,9 +12,10 @@ async function maybeRun (cmd, args = [], chance = 50) {
 }
 
 program
-  .name('guld-random')
-  .version(VERSION)
-  .description("Cryptographically secure random number generator using `/dev/urandom` with fallback to node's `crypto` and finally to `window.crypto || window.mscrypto`.")
+  .name(thispkg.name.replace('-cli', ''))
+  .version(thispkg.version)
+  .description(thispkg.description)
+//  .description("Cryptographically secure random number generator using `/dev/urandom` with fallback to node's `crypto` and finally to `window.crypto || window.mscrypto`.")
   .command('string [length]')
   .alias('str')
   .description('Generate a random string of the given length (default 256).')
@@ -37,5 +39,5 @@ program
     maybeRun(cmd, args, options.chance)
   })
 /* eslint-enable no-console */
-
-program.parse(process.argv)
+runCLI.bind(program)()
+module.exports = program
